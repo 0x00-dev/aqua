@@ -94,7 +94,7 @@ abstract class Application implements ApplicationInterface
     /**
      * @inheritDoc
      */
-    public  function onStop(Closure $closure): ApplicationInterface
+    public function onStop(Closure $closure): ApplicationInterface
     {
         $this->on_stop = $closure;
 
