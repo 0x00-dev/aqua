@@ -1,0 +1,23 @@
+{
+    "name": "0x00-dev/aqua",
+    "description": "PHP micro framework",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "0x00-dev",
+            "email": "0x00.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "^3.0",
+        "symfony/http-foundation": "^5.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Aqua\\" : "src/",
+            "App\\" : "app/"
+        }
+    }
+}
