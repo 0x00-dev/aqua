@@ -98,7 +98,6 @@ class Kernel
     public function remove(string $name): void
     {
         if ($this->hasApp($name)) {
-            $app = $this->getApp($name);
             $this->getApp($name)->stop();
             $this->applications = $this->applications - $name;
         }
