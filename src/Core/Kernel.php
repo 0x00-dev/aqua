@@ -21,6 +21,13 @@ class Kernel
     private iterable $applications = [];
 
     /**
+     * Приложение.
+     *
+     * @var ApplicationInterface
+     */
+    private ApplicationInterface $app;
+
+    /**
      * Экземпляр.
      *
      * @var Kernel
@@ -60,8 +67,9 @@ class Kernel
      */
     public function register(ApplicationInterface $application): Kernel
     {
-        $application->run();
         $this->applications[$application->getName()] = $application;
+        $application->run();
+        $this->app = $application;
 
         return $this;
     }
@@ -88,6 +96,16 @@ class Kernel
     public function getApp(string $name): ?ApplicationInterface
     {
         return $this->hasApp($name) ? $this->applications[$name] : null;
+    }
+
+    /**
+     * Получить текущее приложение.
+     *
+     * @return ApplicationInterface|null
+     */
+    public function getCurrent(): ?ApplicationInterface
+    {
+        return $this->app;
     }
 
     /**

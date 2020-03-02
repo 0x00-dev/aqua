@@ -11,7 +11,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "twig/twig": "^3.0",
         "symfony/http-foundation": "^5.0"
     },
     "autoload" : {
@@ -19,5 +18,8 @@
             "Aqua\\" : "src/",
             "App\\" : "app/"
         }
+    },
+    "require-dev": {
+        "twig/twig": "3.x-dev"
     }
 }

@@ -25,23 +25,23 @@ abstract class Application implements ApplicationInterface
     /**
      * При запуске.
      *
-     * @var Closure
+     * @var Closure/null
      */
-    protected Closure $on_run;
+    protected ?Closure $on_run = null;
 
     /**
      * При остановке.
      *
-     * @var Closure
+     * @var Closure/null
      */
-    protected Closure $on_stop;
+    protected ?Closure $on_stop = null;
 
     /**
      * При удалении.
      *
-     * @var Closure
+     * @var Closure/null
      */
-    protected Closure $on_remove;
+    protected ?Closure $on_remove = null;
 
     /**
      * @inheritDoc
